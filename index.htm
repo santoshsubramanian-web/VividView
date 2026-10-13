@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VividView — Image Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Branded Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <h1 class="brand-title">VividView</h1>
+      <p class="tagline">Discover high-resolution imagery across the globe</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Search Form & Controls -->
+    <section class="search-section">
+      <form id="search-form" class="search-form">
+        <div class="input-wrapper">
+          <label for="search-input" class="sr-only">Search images</label>
+          <input 
+            id="search-input" 
+            type="search" 
+            placeholder="Search topics (e.g. Ocean, Forests, Architecture)..." 
+            required 
+          />
+          <!-- Original Feature 1: Clear Control -->
+          <button type="reset" id="clear-btn" class="btn-clear" aria-label="Clear search input">✕</button>
+        </div>
+        <button type="submit" id="search-btn" class="btn-primary">Search</button>
+      </form>
+
+      <!-- Original Feature 2: Quick-Pick Category Chips -->
+      <div class="category-chips" aria-label="Popular search categories">
+        <span class="chip-label">Popular:</span>
+        <button type="button" class="chip">Nature</button>
+        <button type="button" class="chip">Architecture</button>
+        <button type="button" class="chip">Wildlife</button>
+        <button type="button" class="chip">Minimalism</button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+      <!-- Original Feature 3: Empty-State Message -->
+      <div id="empty-state" class="empty-state">
+        <p>Search to see results</p>
+      </div>
+
+      <!-- Target Results Grid (Intentionally Empty) -->
+      <div id="results" class="results-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
